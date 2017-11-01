@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>King Kitchen</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+ </head>
+  <body>
+	   <!--Релодер 
+		  <div class="pl">
+		  <div class="round1"></div>
+			<div class="pl__l"></div>
+			<div class="pl__r"></div>
+		  </div> -->
+        <header style="header__top">
+       <div class="main__block__header crownfon">
+            <div class="mid clearfix">
+<!--
+                  <div id="case__float" class="logo">
+                     <img src="images/logo.png" class="logo__img" alt="Логотип">
+                  </div>
+-->                 <div class="red__logo left">
+                        <img src="images/red__logo.png" class="red__logo_tr">
+                    </div>
+                 <a href="#modal"> <div class="zamer__main__block left">
+                      <div class="zamer__text">Вызвать замерщика</div>
+                      <div class="zamer__img"><img src="images/GMOKAT.png" class="img__zamer"></div>
+                     </div></a>
+                  <div class="kontacts right">
+                      <p class="kontacts__info ">т. 89196174444</p>
+                      <p class="kontacts__info ">т. 89871449292</p>
+                      <a href="https://e.mail.ru/messages/inbox/?back=1">
+                          <p class="kontacts__info mail ">egor.uxanov.97@mail.ru</p>
+                      </a>
+                  </div>
+              </div>
+         </div>
+      </header>
+      
+      	  <nav>
+		<div class="menu">
+			<div class="mid">
+                <ul class="menu__ul"><a href="index.html" class="logo_f"><img src="images/logo__pol__v.png" class="viver"></a>
+					<li class="menu__li"><a class="menu__a" href="#">Кухни</a></li>
+					<li class="menu__li"><a class="menu__a" href="#">Шкафы</a></li>
+					<li class="menu__li"><a class="menu__a" href="#">Детские</a></li>
+					<li class="menu__li"><a class="menu__a" href="#">Прихожки</a></li>
+                    <li class="menu__li"><a class="menu__a" href="#">Офисы</a></li>
+					<li class="menu__li"><a class="menu__a" href="#">Спальни</a></li>
+				</ul>
+
+			</div>
+		</div>
+	  </nav>
+		  <!--Карусель-->
+        <div>
+    <div class="owl-carousel owl-theme">
+        <div><img src="images/11.jpg"></div>
+    <div> <img src="images/12.png"></div>
+    <div> <img src="images/13.png"> </div>
+        </div>
+        </div>
+	
+      <div class="search__block">
+          <div class="mid">
+              <div class="search__mid">
+              <form action="" method="post" id="search-block-form" class="wow bounceIn">
+              <div class="form-item">
+                <input type="text" name="" value="" size="15" maxlength="128" placeholder="Найти...">
+              </div>
+              <div class="form-actions">
+                <input type="submit" id="edit-submit" name="op" value="Поиск" class="form-submit">
+              </div>
+              </form>
+              </div>
+          </div>
+      </div>
+      
+			<article>
+				<section>
+						<div class="content crownfon">
+							<div id="a4" class="content__header wow fadeIn">Почему лучше выбрать именно нас?</div>
+								<div class="mid tac">
+									<a href="#modal1"><div class="circle wow zoomInUp">
+									<div class="circle__step1">Вы вызываете замерщика указав свой email</div>
+                                    </div></a><!--
+									
+									--><a href="#modal2"><div class="circle wow zoomInUp" data-wow-delay=".3s">
+									<div class="circle__step2">Подтверждаете подписку на рассылку новостей</div>
+                                    </div></a><!--
+									
+									--><a href="#modal3"><div class="circle wow zoomInUp" data-wow-delay=".5s">
+									<div class="circle__step3">Множество интересных работ</div>
+                                    </div></a><!--
+									
+									--><a href="#modal4"><div class="circle wow zoomInUp">
+									<div class="circle__step4">Возможность обговорения деталей через интернет</div>
+                                    </div></a><!--
+									
+									--><a href="#modal5"><div class="circle wow zoomInUp" data-wow-delay=".3s">
+									<div class="circle__step5" >Мы работаем, Вы получаете результат</div>
+                                    </div></a>
+									
+								</div>
+						</div>
+					</section>
+					
+					<section class="crownfon clearfix">
+					<div id="a4" class="content__header__2 wow fadeIn">Кухни</div>
+							<div id="mi-slider" class="mi-slider">
+								<ul>
+									<li><a href="ITEM1.html">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/1.jpg" alt="img02" class="img__size">
+										</div>
+										<div class="img__name">
+										Кухня "Ягода"
+										<h1>Стоимость</h1> <h1>90 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/2.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Яблоко"
+										<h1>Стоимость</h1> <h1>120 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/3.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Киви"
+										<h1>Стоимость</h1> <h1>140 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+								</ul>
+								
+							<ul>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/kitchen/k1.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Престиж"
+										<h1>Стоимость</h1> <h1>100 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/4.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "ДРС"
+										<h1>Стоимость</h1> <h1>120 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/5.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Венге"
+										<h1>Стоимость</h1> <h1>140 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+								</ul>
+								
+								<ul>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/6.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "ДУб"
+										<h1>Стоимость</h1> <h1>150 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/7.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Сосна"
+										<h1>Стоимость</h1> <h1>120 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/8.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Береза"
+										<h1>Стоимость</h1> <h1>130 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+								</ul>
+								
+								<ul>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/9.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Ренесанс"
+										<h1>Стоимость</h1> <h1>90 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/10.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Италия"
+										<h1>Стоимость</h1> <h1>125 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/11.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Венге"
+										<h1>Стоимость</h1> <h1>130 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+								</ul>
+								<nav>
+									<a href="#">Фруктовые</a>
+									<a href="#">Модерн</a>
+									<a href="#">Древесные</a>
+									<a href="#">Классика</a>
+								</nav>
+							</div>
+								<div class="button__open">
+								Открыть все
+								</div>
+					</section>
+					
+					<section>
+								<div class="content none">
+							<div class="content__header__3 wow fadeIn">Оформите расслыку, чтобы всегда быть в курсе!</div>
+									<div class="header__bottom ">
+						<div class="mid clearfix">
+							<div class="sub right wow bounceInUp">
+									<div class="sub__border-form sub__border-form_footer">
+								<form action="#" class="sub__form">
+									<div class="sub__zag">Оформление рассылки:</div>
+									<div><input type="mail" class="sub__mail" placeholder="Введите свой e-mail..."></div>
+									<p class="sub__p">И нажмите на кнопку ниже</p>
+									<div><input type="submit" class="sub__submit" value="Оформить"></div>
+								</form>
+									</div>
+							</div>
+							<div class="box left wow bounceInUp">
+								<img src="images/end.jpg" alt="Обложка системы лев" class="box__img box__img_footer">
+							</div>
+						</div>
+					</div>
+						</div>
+					</section>
+					
+					<section class="crownfon clearfix">
+					<div id="a4" class="content__header__2 wow fadeIn">Шкафы</div>
+							<div id="mi-slider2" class="mi-slider">
+								<ul>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/12.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Шкаф "Аватанак"
+										<h1>Стоимость</h1> <h1>60 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/13.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Реддич"
+										<h1>Стоимость</h1> <h1>80 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/14.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Лагуна"
+										<h1>Стоимость</h1> <h1>65 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+								</ul>
+								
+							<ul>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/15.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Рокшип"
+										<h1>Стоимость</h1> <h1>45 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/16.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Кракен"
+										<h1>Стоимость</h1> <h1>50 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+									<li><a href="#">
+									
+									<div class="maxsize wow bounceIn">
+										<div class="img__div">
+											<img src="images/img__kitchen/17.jpg" alt="img02">
+										</div>
+										<div class="img__name">
+										Кухня "Ноктюрн"
+										<h1>Стоимость</h1> <h1>60 000р</h1>
+										</div>
+									</div>
+									
+									</a></li>
+								</ul>
+								
+								<ul>
+									<li><a href="#">
+									
+									</a></li>
+								</ul>
+								
+								<nav>
+									<a href="#">Шкафы-купе</a>
+									<a href="#">Шкафы (Классика)</a>
+								</nav>
+							</div>
+								<div class="button__open">
+								Открыть все
+								</div>
+					</section>
+                
+                    <section class="crownfon other__info">
+                        <div id="a4" class="content__header__2 wow fadeIn">Особенные работы</div>
+                            <div class="mid2">
+                            <div class="main__block__content clearfix wow bounceInUp">
+                                <div class="info__block__content left">
+                                    <div class="img__block__content ">
+                                     <img src="images/beess.jpg" class="box__img__block"> 
+                                    <div class="text__block__content">
+                                    Бесседка "Ролф": придает внутреннее спокойствие и чувство радости каждое утро
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="rigth__block__content right">
+                                    <div class="right__img__block">
+                                        <img src="images/beess.jpg" class="box__img__block__min"> 
+                                    </div>
+                                    <div class="right__text__block">
+                                        <p>Данная бесседка обладаем особым шармом и красотой отделки</p>
+                                        <p>Стоимость данной бесседки около <br>130 000р</p>
+                                    </div>    
+                                </div>
+                            </div>
+                         
+                
+                    <div class="block__other clearfix">
+                        	<div class="maxsize__2 wow bounceInUp">
+										<div class="img__div">
+											<img src="images/img__kitchen/18.jpg" alt="img02" class="img__div__size">
+										</div>
+										<div class="img__name">
+										Веранда "Сосна"
+										<h1>Стоимость</h1> <h1>80 000р</h1>
+										</div>
+									</div>
+                        
+                            	<div class="maxsize__2 wow bounceInUp">
+										<div class="img__div">
+											<img src="images/img__kitchen/19.jpg" alt="img02" class="img__div__size">
+										</div>
+										<div class="img__name">
+										Баня "4x7m2"
+										<h1>Стоимость</h1> <h1>180 000р</h1>
+										</div>
+									</div>
+                                   </div>
+                                <div class="button__open">
+								Открыть все
+								</div>
+                    </div>
+					       </section>
+                
+                <section class="crownfon">
+                       <div id="a4" class="content__header__2 wow fadeIn">мы вконтакте!</div>
+<!--
+                <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
+                 VKWidget 
+                <div id="vk_groups"></div>
+                <script type="text/javascript">
+                VK.Widgets.Group("vk_groups", {mode: 3, color1: 'A32C15', color2: 'FFFFFF', color3: 'F3F7EF'}, 82493937);
+                </script>
+-->
+                    <div class="pusto wow fadeIn">
+                        <div class="mid">
+                        <p>
+                        Наша группа Вконтакте увеличивается с каждым днем. Если ты хочешь всегда быть в курсе всех событий, то необходимо подписаться на нас. В разделе "Обсуждения" всегда можно задать интересующие Вас вопросы.
+                        </p>
+                        <p>
+                        Каждый день появляется новая мебель, поэтому не забывайте заходить в группу, чтобы выбрать для себя что нибудь новенькое.
+                        </p>
+                        </div>
+                    </div>
+                </section>
+                
+				</article>
+      
+            <footer class="crownfon">
+                <div class="f__fon wow bounceInUp">
+                <div class="mid">
+                    <hr class="line__menu">
+                    <ul class="menu__ul__f">
+                    <li class="menu__f"><a class="menu__a__f" href="#">Кухни</a>
+                        <ul class="vl__li">
+                                <li class="vl"><a class="menu__a__vl" href="#">Модерн</a></li>
+                                <li class="vl"><a class="menu__a__vl" href="#">Классические</a></li>
+                        </ul>
+                    </li>
+					<li class="menu__f"><a class="menu__a__f" href="#">Шкафы</a>
+                                <ul class="vl__li">
+                                 <li class="vl"><a class="menu__a__vl" href="#">Шкафы-купе</a></li> 
+                                </ul>
+                    </li>
+					<li class="menu__f"><a class="menu__a__f" href="#">Детские</a>
+                                     <ul class="vl__li">
+                                 <li class="vl"><a class="menu__a__vl" href="#">Кровати</a></li>
+                                <li class="vl"><a class="menu__a__vl" href="#">Шкафы-купе</a></li>
+                                    </ul>
+                        
+                        </li>
+					<li class="menu__f"><a class="menu__a__f" href="#">Прихожки</a>
+                                     <ul class="vl__li">
+                                 <li class="vl"><a class="menu__a__vl" href="#">Шкафы-купе</a></li>
+                                    </ul>
+                    </li>
+                    <li class="menu__f"><a class="menu__a__f" href="#">Офисы</a>
+                                     <ul class="vl__li">
+                                 <li class="vl"><a class="menu__a__vl" href="#">Шкафы-купе</a></li>
+                                <li class="vl"><a class="menu__a__vl" href="#">Стеллажи</a></li>
+                                    </ul>
+                        </li>
+					<li class="menu__f"><a class="menu__a__f" href="#">Спальни</a>
+                        
+                                     <ul class="vl__li">
+                                 <li class="vl"><a class="menu__a__vl" href="#">Шкафы-купе</a></li>
+                                <li class="vl"><a class="menu__a__vl" href="#">Кровати</a></li>
+                        </ul>
+                        </li>  
+                    </ul>    
+                </div>
+                </div>
+                <div class="author">
+                    <div class="mid clearfix">
+                    <span class="author__name left wow bounceInUp">2017©FreezkoS</span>
+                        <div class="vk__logo right  wow bounceInUp"><span class="vk__text">Мы Вконтакте </span><img src="images/vk.png" class="img__vk"></div>
+                    </div>
+                </div>
+            </footer>
+				<script src="js.js"></script>
+      
+              <script>
+            $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+            items:1,
+            loop:true,
+            autoplay: true,
+            autoplayTimeout:5500
+            });
+            });
+        </script>
+				
+				<script src="js/jquery.catslider.js"></script>
+				<script>
+					$(function() {
+						$( '#mi-slider' ).catslider();
+						$( '#mi-slider2' ).catslider();
+					});
+				</script>
+				<script src="js/jquery.catslider.js"></script>
+			<!--	<script src="js.js"></script>-->
+<!--Якорь возврата	-->
+      <div id="toTop"><img src="images/yakor.png" width="50px" height="50px" class="img__w"> 
+      </div>
+<!--Телефоны-->
+       <div id="phone"><img src="images/phone.png" width="50px" height="50px" class="img__w"> 
+      </div>
+      
+      <div class="number__block">
+                      <p class="t__text">т. 89196174444</p>
+                      <p class="t__text">т. 89871449292</p>
+                      <a href="https://e.mail.ru/messages/inbox/?back=1" target="_blank">
+                          <p class="em__text">egor.uxanov.97@mail.ru</p>
+                      </a>
+      </div>
+      
+<!--Модальное окно 1-->
+     <div class="remodal wow zoomIn" data-remodal-id="modal">
+      <button data-remodal-action="close" class="remodal-close"></button>
+         <h1 class="zamer__zag">Вызов замерщика</h1>
+         <div class="zamer__info left">
+            <div class="zamer__info__text">
+                <p class="info__modal__text">
+                Одно из главных достоинств мебели, изготовленной на заказ, – возможность её «встраивания» в углы, ниши, между полом и потолком и пр. Естественно, при заказе такой мебели необходимо произвести идеально точные замеры помещения. Во избежание ошибок и неточностей замер всегда производится специалистами компании.
+                </p>
+                <p class="info__modal__text">
+                С учётом Ваших пожеланий и особенностей помещения дизайнер разрабатывает первый, предварительный эскиз мебельной композиции.
+                </p>
+             </div>
+             <div class="zamer__info__img">
+                 <img src="images/big_bike.png" class="img__zamer__auto">
+             </div>
+         </div>
+         
+        <div class="forma__modal right">
+    <form>
+
+        <label>Ваше Имя</label>
+        <input name="name" placeholder="Введите Имя...">
+
+        <label>Ваш город</label>
+        <input name="email" type="email" placeholder="Уфа">
+
+        <label>Контактный телефон</label>
+         <input name="email" type="email" placeholder="Введите номер...">
+        
+         <label>Email</label>
+         <input name="email" type="email" placeholder="Введите email...">
+        
+        <input id="submit" name="submit" type="submit" value="Отправить">
+
+    </form>
+        </div>
+    </div>
+      
+      <!--Модальное окно 2-->
+      <div class="remodal wow zoomIn" data-remodal-id="modal1">
+          <button data-remodal-action="close" class="remodal-close"></button>
+            <p class="info__modal__text">Для того, чтобы вызвать замерщика необходимо указать: свой email, действетельный контактный телефон, 
+                Имя и город, в котором и необходимо производить установка нашей мебели.
+            </p>
+            <p class="info__modal__text">
+                Для того, чтобы начать заполнять анкету, необходимо кликнуть в левый верхний угол по кнопке <span class="color__text">"Вызвать замерщика"</span> <span class="warning__text">(если вы используете десктопную версию сайта)</span> или правый верхний <span class="warning__text">(если мобильная версия сайта)</span>.
+            </p>
+            <p class="info__modal__text">
+            Все очень просто!
+            </p>
+            <img src="images/lisa.png" class="lisa__png">
+      </div>
+      
+      <!--Модальное окно 3-->
+      
+            <div class="remodal wow zoomIn" data-remodal-id="modal2">
+          <button data-remodal-action="close" class="remodal-close"></button>
+            <p class="info__modal__text">
+                На нашем сайте постоянно идет прирост новой и качественной мебели и чтобы вы ничего не пропустили, 
+                желательно чтобы вы подписалиьс на рассылку новостей, тем самым вы будете всегда в курсе всех событий!
+            </p>
+            <p class="info__modal__text">
+                Для того, чтобы оформить подписку, необходимо спустить вниз на главной странице, где находится заголовок <span class="color__text">"Оформить рассылку"</span>.
+            </p>
+            <img src="images/lisa2.png" class="lisa__png">
+      </div>
+      
+            <!--Модальное окно 4-->
+      
+            <div class="remodal wow zoomIn" data-remodal-id="modal3">
+          <button data-remodal-action="close" class="remodal-close"></button>
+            <p class="info__modal__text">Если вас не заинтересовал наш сайт - значит вы не видели все интересные работы, которые были у нас собраны.
+            </p>
+            <p class="info__modal__text">
+               Вам достаточно выбрать в верхнем горизонтальном меню необходимый пункт, для того чтобы открыть все интересующие вас работы или ввести в поиск слова, которые относятся к той или иной мебели.
+            </p>
+            <p class="info__modal__text">
+            Очень простой и интуитивный интерфейс поможет с легкостью найти все необходимо.
+            </p>
+            <img src="images/lisa3.jpg" class="lisa__png">
+      </div>
+      
+            <!--Модальное окно 5-->
+      
+            <div class="remodal wow zoomIn" data-remodal-id="modal4">
+          <button data-remodal-action="close" class="remodal-close"></button>
+            <p class="info__modal__text">
+                С нами можно связаться по разному: через телефон или интернет.
+            </p>
+            <p class="info__modal__text">
+                Если же вы выбрали второй пункт, то вам достаточно кликнуть по надписе с почтой и браузер автоматически перенаправит вас на наш почтовый ящик.
+            </p>
+            <p class="info__modal__text">
+            Там вам просто необходимо указать: ваше имя, номер телефона и что вас интересует.
+            </p>
+            <img src="images/lisa4.jpg" class="lisa__png">
+      </div>
+      
+            <!--Модальное окно 6-->
+      
+            <div class="remodal wow zoomIn" data-remodal-id="modal5">
+          <button data-remodal-action="close" class="remodal-close"></button>
+            <p class="info__modal__text">
+                Наша организация <span class="color__text">работает более 15 лет</span>.
+            </p>
+            <p class="info__modal__text">
+               Каждый наш заказ делается быстро, качественно надежно. Еще небыло случаев, когда мы не доделывали работу, либо происходили какие либо непредвиденные проблемы. И если они и случатся, то сразу же заменем бракованный товар или вернем вам деньги.
+            </p>
+            <p class="info__modal__text">
+            С Уважением, King Kitchen.
+            </p>
+            <img src="images/lisa5.png" class="lisa__png">
+      </div>
+      
+<!--Модальное окно скрипт-->
+      <script src="remodal/remodal.min.js"></script>
+      
+    <script type="text/javascript" src="js/Scroll.js" ></script>
+            <script type="text/javascript" src="wow/wow.min.js" ></script>
+        <script>
+             wow = new WOW(
+                      {
+                      offset:      0,          // default
+                    }
+                    )
+             wow.init();
+        </script>
+  </body>
+</html>
+

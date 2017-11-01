@@ -1,0 +1,156 @@
+/*Страница с описанием товаров*/
+.banner{
+width: 100%;
+height: auto;
+margin-bottom: 20px;
+}
+
+.zagolovok{
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: 600;
+    margin-top:15px;
+}
+
+
+.zagolovok:after {
+    content: '';
+    width: 100%;
+    display: block;
+    height: 1px;
+    background: black;
+    position: absolute;
+    top: 56%;
+    margin-top: -0.5px;
+    left: 0;
+}
+
+.zagolovok h1{
+    max-width: 1000px;
+    overflow: hidden;
+    color: #383435;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: normal;
+    margin: 0;
+    display: inline-block;
+    padding: 0 15px;
+    background: #fcfcfc;
+    position: relative;
+    z-index: 1;
+}
+
+/*Gallery*/
+.gallery{
+width: 100%;
+height: 300px;
+background: gray;
+margin-bottom: 20px;
+}
+
+.disc__items{
+color:#403B37;
+padding: 10px;
+margin-top:10px;
+}
+
+.disc__items h2, .komment__zag{
+font-weight: 400;
+font-size: 30px;
+margin-top:0;
+}
+
+.komment__zag{
+color:#403B37;
+margin: 20px 0 30px 10px;
+}
+
+.disc__items__text{
+font-size: 20px;
+}
+
+#gallery{
+margin: 0 auto;
+width: 100%;
+border: 1px solid black;
+z-index: 1;
+}
+
+/*Кнопка вызова замерщика*/
+.zamer__block__gallery{
+background: white;
+border:2px solid #1874CD;
+padding:10px 0 10px 0;
+color:#1874CD;
+text-transform: uppercase;
+font-size: 19px;
+line-height: 19px;
+width: 300px;
+margin: 0 auto;
+margin-top:30px;
+text-align: center;
+font-weight: 700;
+border-radius: 10px;
+}
+
+.zamer__block__gallery:hover{
+background: #1874CD;
+color:white;
+}
+
+/*Табло заказа*/
+.tablo__zakaza{
+width: 100%;
+height: auto;
+margin:15px 10px 15px 0px;
+color:black;
+padding: 20px;
+border: 2px solid red;
+background: white;
+}
+
+.tablo__zag{
+color:red;
+text-align: center;
+margin: 0 0 20px 0;
+}
+
+.tablo__text{
+text-align: left;
+font-size: 19px;
+padding: 0;
+margin: 0;
+}
+
+.war{
+color: #1874CD;
+}
+
+@media screen and (max-width: 600px){
+    .zagolovok{
+    margin-top: 12px;
+    }
+    .zagolovok h1{
+    font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .items__text__2{
+    font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .disc__items__text, .tablo__text{
+    font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .zagolovok h1{
+    font-size: 19px;
+    }
+}

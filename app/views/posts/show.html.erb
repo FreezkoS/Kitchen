@@ -1,0 +1,52 @@
+<arctical class="post2 clearfix">
+    <div class="mid2 clearfix">
+    <div class="zagolovok">  
+    <h1 class="items__text"><%= @post.title %></h1>
+    </div>
+    <small>
+        <time>
+        <% if @post.category.present? %>
+        <%= link_to @post.category.name, @post.category %>
+        |
+        <% end %>
+        <%= @post.created_at.to_date.strftime("%d %B, %Y") %>
+        <% if user_signed_in? && current_user.admin? %>
+        |
+        <%= link_to 'Ред', edit_admin_post_path(@post) %>
+        |
+        <%= link_to 'Уд', admin_post_path(@post), method: :delete, data: { confirm: 'Вы уверены?' } %>
+        <% end %>
+        </time>
+    </small>
+        
+                    <!--Gallery-->
+            <div id="gallery" style="display:none;">
+        <%= image_tag @post.image.url(:large), data: { image: @post.image.url(:large) } %>
+        <%= image_tag @post.image1.url(:large), data: { image: @post.image1.url(:large) } %>
+        <%= image_tag @post.image2.url(:large), data: { image: @post.image2.url(:large) } %>
+        <%= image_tag @post.image3.url(:large), data: { image: @post.image3.url(:large) } %>
+            </div>
+                    <a href="#modal" class="no__link">
+                    <div class="zamer__block__gallery">
+                    Вызвать замерщика
+                    </div>
+                    </a>
+    <section class="post-body">        
+<!--  <%= image_tag @post.image.url(:large), class: 'img-show' if @post.image? %>-->
+        <p class="t3">Описание</p>
+    <%= @post.body.html_safe %><br>
+        <h5><%= @post.summary %></h5>
+    </section>
+        
+               <div class="tablo__zakaza">
+                        <h1 class="tablo__zag">Внимание!</h1>
+                        <div class="tablo__text">
+                            Для того, чтобы произвети заказ выбранного Вами товара, необходимо обязательно <span class="war">Вызвать замерщика</span> или связаться с нами любим из доступных способов, а именно по электронной почте или моб. телефону, которые указанны в начале стр <span class="war">(если вы сидите через десктопную версию сайта)</span>, либо по нажатию кнопки в правом нижнем углу <span class="war">(если используется моб. версия сайта)</span>.
+                        </div>
+                    </div>
+    </div>
+</arctical>
+<div class="mid2 clearfix">
+    <p class="t3">Комментарии</p>
+<%= render 'disqus' %>
+</div>

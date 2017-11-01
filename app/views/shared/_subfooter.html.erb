@@ -1,0 +1,24 @@
+<footer class="crownfon">
+    <div class="f__fon animate bounceInUp">
+        <div class="mid">
+            <hr class="line__menu">
+                <ul class="menu__ul__f">
+					<% Category.roots.each do |category| %>
+                    <li class="menu__f">
+                <%= link_to category.name, category, class: "menu__a__f" %>
+                <%= render 'shared/submenu_categories', categories: category.root.descendants.arrange %>   
+                    </li>
+                    <% end %>
+				</ul>
+        </div>
+    </div>
+    
+           <div class="author">
+                    <div class="mid clearfix">
+                    <span class="author__name left wow bounceInUp">2017©FreezkoS</span>
+                        <div class="vk__logo right  wow bounceInUp"><span class="vk__text">Мы Вконтакте </span>
+                            <%= image_tag('vk.png', :alt => "logo", :class => 'img__vk') %>
+                            </div>
+                    </div>
+                </div>
+</footer>

@@ -1,0 +1,105 @@
+#user_remember_me{
+width:40px;
+}
+
+input#v1{
+width: 243px;
+height: 30px;
+border-radius: 10px 0px 0px 10px;
+padding: 0;
+padding-left: 6px;
+}
+
+.search__blog{
+width: 310px;
+margin: 0 auto;
+}
+
+.btnS{
+height: 30px;
+font-size:13px;
+line-height: 13px;
+border:none;
+border-left: none;
+color:#708090;
+font-weight: 700;
+font-family: 'Roboto';
+border-radius: 0px 10px 10px 0px;
+position: absolute;
+}
+
+.btnS:hover{
+background: #708090;
+ color:white;   
+border:none;
+}
+
+.iimage{
+ width: 100%;
+height: auto;
+margin: 0 auto;
+align-content: center;
+padding: 20px;
+}
+
+.al__image{
+margin: 0 auto;
+width:400px;
+}
+
+.items__text__2{
+font-size:23px;
+}
+
+.fon__ad{
+background: url("rozovyi.jpg") no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;	
+display: inline-block;
+width: 100%;
+height: auto;
+margin-bottom: -7px;
+}
+
+.inlB, .new__obj__add{
+display: block;
+padding: 5px 0px 5px 0px;
+padding-bottom: 7px;
+}
+
+.fInlB, .new__obj__add{
+color:white;
+display: block;
+text-decoration: none;
+opacity: 0.8;
+font-family: 'Misral';
+padding: 3px;
+}
+
+.fInlB{
+width: 300px;
+}
+
+.fInlB:hover, .new__obj__add:hover{
+text-decoration: none;
+font-weight: 500;
+opacity: 1;
+color:white;
+}
+
+.pad{
+padding: 9px;
+padding-left: 3px;
+float: left;
+width: 100px;
+}
+
+.new__obj__add{
+float: right;
+width: 160px;
+text-align: right;
+ padding: 9px;
+padding-right: 3px;   
+}

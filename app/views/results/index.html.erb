@@ -1,0 +1,26 @@
+<% if @search.empty? %>
+<div class="mid2">
+<h2 class="items__text__2 mar2">Извините, по вашему запросу ничего не найдено...</h2>
+<div class="al__image">
+<%= image_tag('i.png', :alt => 'Sorry, not found', :class => 'iimage') %>
+    </div>
+</div>
+<% session[:name] = "Страница не найдена" %>
+<% else %>
+    <div class="mid2">
+        <%= @search.each do |s| %>
+ <arctical class="post clearfix">
+    <div class="mid2 cleardix">
+
+    <%= image_tag s.image.url(:thumb), class: 'thumb myimg' if s.image? %>
+    <section>  
+    <h2 class="t1"><%= link_to s.title, s %></h2>
+    <h2 class="t2"><%= s.summary %></h2>
+    </section>
+     </div>
+</arctical>
+        <% session[:name] = s.title %>
+       <% end %>
+</div>
+<% end %>
+

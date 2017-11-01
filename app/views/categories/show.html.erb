@@ -1,0 +1,15 @@
+<div class="mid2 clearfix">
+<div class="zagolovok">
+<h1 class="items__text"><%= @category.name %></h1>
+</div>    
+    <% session[:name] = @category.name %>
+    
+<section id="posts">
+<%= render @posts %>
+</section>
+
+<!--Вывод кухон после пагинации-->
+<div class="kit_pag">
+<%= will_paginate @posts, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
+</div>
+</div>

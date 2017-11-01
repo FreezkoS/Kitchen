@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= session[:name] %></title>
+  <%= stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=cyrillic', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!--Хедер с меню и др инормацией-->
+        <header style="header__top">
+       <div class="main__block__header crownfon">
+            <div class="mid clearfix">
+<!--
+                  <div id="case__float" class="logo">
+                     <img src="images/logo.png" class="logo__img" alt="Логотип">
+                  </div>
+-->                 <div class="red__logo left">
+                <%= link_to image_tag("red__logo.png", :class => 'red__logo_tr'), root_path %>
+                    </div>
+                 <a href="#modal"> <div class="zamer__main__block left">
+                      <div class="zamer__text">Вызвать замерщика</div>
+                      <div class="zamer__img">
+                          <%= image_tag('GMOKAT.png', :alt => "logo", :class => 'img__zamer') %>
+                          </div>
+                     </div></a>
+                  <div class="kontacts right">
+                      <p class="kontacts__info ">т. 89196174444</p>
+                      <p class="kontacts__info ">т. 89871449292</p>
+                      <a href="https://e.mail.ru/messages/inbox/?back=1" class="no__link">
+                          <p class="kontacts__info mail ">egor.uxanov.97@mail.ru</p>
+                      </a>
+                  </div>
+              </div>
+         </div>
+      </header>   
+<!--    Меню -->
+    <%= render 'shared/submenu' %>
+<!--    поисковик--> 
+      <div class="search__block">
+          <div class="mid">
+              <div class="search__mid">
+<!--
+              <form action="" method="post" id="search-block-form" class="wow bounceIn">
+              <div class="form-item">
+                <input type="text" name="" value="" size="15" maxlength="128" placeholder="Найти...">
+              </div>
+              <div class="form-actions">
+                <input type="submit" id="edit-submit" name="op" value="Поиск" class="form-submit">
+              </div>
+              </form>
+
+-->
+    <%= form_tag("/results/index", :method => "get") do %>
+                <div class="search__blog"> 
+    <%= text_field_tag(:v1) %>
+    <%= submit_tag "Искать", class:'wd btnS right' %>
+                </div>
+    <% end %>
+              </div>
+          </div>
+      </div>
+    
+    <div class="fon__ad">
+        <div class="mid2">
+        <% if user_signed_in? %>
+              <%= link_to "Выход", destroy_user_session_path, method: :delete, class: "fInlB pad" %>
+            <% if user_signed_in? && current_user.admin? %>
+            <%= link_to 'Новый объект', new_admin_post_path, class: 'new__obj__add' %> 
+            <% end %>
+            <% else %>
+            <div class="inlB">
+              <%= link_to "Вход", new_user_session_path, class: "fInlB" %>
+               <%= link_to "Регистрация", new_user_registration_path, class: "fInlB" %>
+            </div>  
+            <% end %>
+    </div>
+    </div>
+<!--    Главный блок с отображением всего остального-->
+  
+    <section class="crownfon clearfix">
+<div class="mid2 clearfix">
+    <div class="row">
+        <div class="col-md-12">
+            <% flash.each do |name, message| %>
+            <div class="alert <%= bootstrap_class_for(name) %> mar2">
+                <button class="close" data-dismiss="alert">&times</button>
+                <%= message %>
+            </div>
+            <% end %>
+        </div>
+    </div>
+    </div>
+        <%= yield %>
+</section>
+<!--    Футер и информация об авторе
+     <footer class="crownfon">
+                <div class="f__fon animate bounceInUp">
+                <div class="mid">
+                    <hr class="line__menu">
+                    <ul class="menu__ul__f">
+                    <li class="menu__f"><a class="menu__a__f" href="#">Кухни</a>
+                        <ul class="vl__li">
+                                <li class="vl"><a class="menu__a__vl" href="#">Модерн</a></li>
+                                <li class="vl"><a class="menu__a__vl" href="#">Классические</a></li>
+                        </ul>
+                    </li>
+					<li class="menu__f"><a class="menu__a__f" href="#">Шкафы</a>
+                                <ul class="vl__li">
+                                 <li class="vl"><a class="menu__a__vl" href="#">Шкафы-купе</a></li> 
+                                </ul>
+                    </li>
+					<li class="menu__f"><a class="menu__a__f" href="#">Детские</a>
+                                     <ul class="vl__li">
+                                 <li class="vl"><a class="menu__a__vl" href="#">Кровати</a></li>
+                                <li class="vl"><a class="menu__a__vl" href="#">Шкафы-купе</a></li>
+                                    </ul>
+                        
+                        </li>
+					<li class="menu__f"><a class="menu__a__f" href="#">Прихожки</a>
+                                     <ul class="vl__li">
+                                 <li class="vl"><a class="menu__a__vl" href="#">Шкафы-купе</a></li>
+                                    </ul>
+                    </li>
+                    <li class="menu__f"><a class="menu__a__f" href="#">Офисы</a>
+                                     <ul class="vl__li">
+                                 <li class="vl"><a class="menu__a__vl" href="#">Шкафы-купе</a></li>
+                                <li class="vl"><a class="menu__a__vl" href="#">Стеллажи</a></li>
+                                    </ul>
+                        </li>
+					<li class="menu__f"><a class="menu__a__f" href="#">Спальни</a>
+                        
+                                     <ul class="vl__li">
+                                 <li class="vl"><a class="menu__a__vl" href="#">Шкафы-купе</a></li>
+                                <li class="vl"><a class="menu__a__vl" href="#">Кровати</a></li>
+                        </ul>
+                        </li>  
+                    </ul>    
+                </div>
+                </div>
+
+                <div class="author">
+                    <div class="mid clearfix">
+                    <span class="author__name left wow bounceInUp">2017©FreezkoS</span>
+                        <div class="vk__logo right  wow bounceInUp"><span class="vk__text">Мы Вконтакте </span>
+                            <%= image_tag('vk.png', :alt => "logo", :class => 'img__vk') %>
+                            </div>
+                    </div>
+                </div>
+            </footer>
+-->
+    
+     <%= render 'shared/subfooter' %>
+    
+    
+				<script src="js.js"></script>
+      
+			<!--	<script src="js.js"></script>-->
+<!--Якорь возврата	-->
+      <div id="toTop">
+           <%= image_tag('yakor.png', :alt => "logo", :class => 'img__w') %>
+      </div>
+<!--Телефоны-->
+       <div id="phone">
+            <%= image_tag('phone.png', :alt => "logo", :class => 'img__w') %>
+      </div>
+      
+      <div class="number__block">
+                      <p class="t__text">т. 89196174444</p>
+                      <p class="t__text">т. 89871449292</p>
+                      <a href="https://e.mail.ru/messages/inbox/?back=1" target="_blank" class="no__link">
+                          <p class="em__text">egor.uxanov.97@mail.ru</p>
+                      </a>
+      </div>
+      
+      <!--Модальное окно 1-->
+    <% if user_signed_in? %>
+     <div class="remodal" data-remodal-id="modal">
+      <button data-remodal-action="close" class="remodal-close"></button>
+         <h1 class="zamer__zag">Вызов замерщика</h1>
+         <div class="zamer__info left">
+            <div class="zamer__info__text">
+                <p class="info__modal__text">
+                Одно из главных достоинств мебели, изготовленной на заказ, – возможность её «встраивания» в углы, ниши, между полом и потолком и пр. Естественно, при заказе такой мебели необходимо произвести идеально точные замеры помещения. Во избежание ошибок и неточностей замер всегда производится специалистами компании.
+                </p>
+                <p class="info__modal__text">
+                С учётом Ваших пожеланий и особенностей помещения дизайнер разрабатывает первый, предварительный эскиз мебельной композиции.
+                </p>
+             </div>
+             <div class="zamer__info__img">
+                 <%= image_tag('big_bike.png', :alt => "logo", :class => 'img__zamer__auto') %>
+             </div>
+         </div>
+         
+        <div class="forma__modal right">
+    <form>
+
+        <label>Ваше Имя</label>
+        <input name="name" placeholder="Введите Имя...">
+
+        <label>Ваш город</label>
+        <input name="email" type="email" placeholder="Уфа">
+
+        <label>Контактный телефон</label>
+         <input name="email" type="email" placeholder="Введите номер...">
+        
+         <label>Email</label>
+         <input name="email" type="email" placeholder="Введите email...">
+        
+        <input id="submit" name="submit" type="submit" value="Отправить">
+
+    </form>
+        </div>
+    </div>
+    <% else %>
+    <div class="remodal wow zoomIn" data-remodal-id="modal">
+        <button data-remodal-action="close" class="remodal-close"></button>
+        <h2 class="items__text__2">Вам необходимо авторизоваться!</h2>
+    </div>
+    <% end %>
+</body>
+</html>
