@@ -14,11 +14,12 @@ gem 'jquery-ui-rails'
 
 gem 'trix'
 
-#gem 'will_paginate', '~> 3.1.0'
+#   gem 'will_paginate', '~> 3.1.0'
 
 gem 'ancestry'
-
+group :production do
 gem 'pg'
+end
 
 gem 'pg_search'
 
