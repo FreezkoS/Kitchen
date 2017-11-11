@@ -18,8 +18,9 @@ gem 'trix'
 
 gem 'ancestry'
 group :production do
-gem 'pg'
+
 end
+gem 'pg'
 
 gem 'pg_search'
 

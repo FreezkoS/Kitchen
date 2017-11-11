@@ -11,4 +11,4 @@ default: &default
 
 development:
   <<: *default
-  database: kit_dev1
+  database: kit_dev
