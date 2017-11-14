@@ -29,8 +29,8 @@ config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
-
+  config.assets.compile = true # было false,но добавил true для компиляции файла css
+ config.serve_static_files = true 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
