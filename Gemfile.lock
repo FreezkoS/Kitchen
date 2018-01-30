@@ -241,7 +241,7 @@ PLATFORMS
 
 DEPENDENCIES
   ancestry
-  bootstrap (~> 4.0.0.beta)
+  bootstrap
   bootstrap-kaminari-views
   byebug
   capistrano (~> 3.8)
