@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap'
 # Use jquery as the JavaScript library
 
 source 'https://rails-assets.org' do
