@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 # Use jquery as the JavaScript library
-gem 'bootstrap', '~> 4.0.0'
+#gem 'bootstrap', '~> 4.0.0'
 source 'https://rails-assets.org' do
 gem 'rails-assets-tether', '>= 1.1.0'
 end
