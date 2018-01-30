@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+ #config.action_mailer.delivery_method = :sendmail
   # Code is not reloaded between requests.
   config.cache_classes = true
 config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/ 
@@ -13,6 +13,13 @@ config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
+    
+      config.action_mailer.delivery_method = :sendmail
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.default_url_options = { host: 'kingkitchen.pro' }
+    
+  
+
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
@@ -47,7 +54,7 @@ config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   config.log_level = :debug
- config.action_mailer.delivery_method = :sendmail
+
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
