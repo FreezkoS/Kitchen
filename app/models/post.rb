@@ -8,5 +8,5 @@ class Post < ActiveRecord::Base
 
 include PgSearch
     pg_search_scope :search_everywhere, against: [:title, :body]
-
+    paginates_per 1
 end

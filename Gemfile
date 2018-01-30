@@ -23,7 +23,9 @@ end
 gem 'pg'
 
 gem 'pg_search'
+gem 'kaminari'
 
+gem 'bootstrap-kaminari-views'
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
@@ -66,5 +68,10 @@ gem 'sqlite3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'letter_opener'
+gem 'capistrano', '~>3.8'
+    gem 'capistrano-rails', '~>1.2'
+    gem 'capistrano-passenger', '~>0.2'
+    gem 'capistrano-rbenv', '~>2.1'
+    gem 'capistrano-bundler', '~>1.2'
 end
 

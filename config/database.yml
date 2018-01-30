@@ -12,3 +12,12 @@ default: &default
 development:
   <<: *default
   database: kit_dev
+
+production:
+  <<: *default
+  adapter: postgresql
+  host: localhost
+  port: 5432
+  database: kit_dev
+  user: egor
+  password: 9302390B5
