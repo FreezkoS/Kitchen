@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'sends/index'
+
+  get 'zams/index'
 ##поисковик
   get 'results/index'
 ##пароли
@@ -13,5 +16,8 @@ resources :categories, only: [:show]
      resources :posts, except: [:show, :index, :welcom]
     resources :categories, except: [:show]   
  end
+
+##вызов замерщика
+
     
 end

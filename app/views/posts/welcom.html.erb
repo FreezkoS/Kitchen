@@ -225,12 +225,18 @@
 						<div class="mid clearfix">
 							<div class="sub right wow bounceInUp">
 									<div class="sub__border-form sub__border-form_footer">
+<!--
 								<form action="#" class="sub__form">
 									<div class="sub__zag">Оформление рассылки:</div>
 									<div><input type="mail" class="sub__mail" placeholder="Введите свой e-mail..."></div>
 									<p class="sub__p">И нажмите на кнопку ниже</p>
 									<div><input type="submit" class="sub__submit" value="Оформить"></div>
 								</form>
+-->
+    <%= form_tag("sends/index", :method => "get") do %>
+            <%= email_field_tag(:email) %>
+            <%= submit_tag "Оформить" %>
+    <% end %>
 									</div>
 							</div>
 							<div class="box left wow bounceInUp">

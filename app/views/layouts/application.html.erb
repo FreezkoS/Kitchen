@@ -195,7 +195,8 @@
          </div>
          
         <div class="forma__modal right">
-    <form>
+<!--
+  <form>
 
         <label>Ваше Имя</label>
         <input name="name" placeholder="Введите Имя...">
@@ -212,6 +213,17 @@
         <input id="submit" name="submit" type="submit" value="Отправить">
 
     </form>
+-->
+
+              
+      <%= form_tag("zams/index", :method => "get") do %>
+            <%= text_field_tag(:name) %>
+            <%= text_field_tag(:city) %>
+            <%= text_field_tag(:phone1) %>
+            <%= email_field_tag(:email) %>
+            <%= submit_tag "Отправить" %>
+    <% end %>
+            
         </div>
     </div>
     <% else %>
