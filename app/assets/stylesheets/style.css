@@ -876,22 +876,21 @@ font-weight:300;
 margin:20px 0;
 }
 
-.sub__mail, .sub__submit{
+.sub__mail, .sub__submit, #email, #name, #city, #phone1{
 font-weight: 300;
 width: 100%;
 padding: 15px 0;
 transition: 0.5s;
 }
 
-.sub__mail{
+.sub__mail, #email, #name, #city, #phone1{
 font-size:20px;
 outline:0;
 line-height:20px;
 text-indent: 20px;
-border: 1px solid #c7b900;
 }
 
-.sub__mail:focus{
+.sub__mail:focus, #email:focus, #name:focus, #city:focus, #phone1:focus{
 border: 1px solid transparent;
 box-shadow: 0 0 7px #886600;
 }
