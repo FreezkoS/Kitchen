@@ -6,15 +6,15 @@
     <small>
         <time>
         <% if @post.category.present? %>
-        <%= link_to @post.category.name, @post.category %>
+        <%= link_to @post.category.name, @post.category, class: "no__link" %>
         |
         <% end %>
-        <%= @post.created_at.to_date.strftime("%d %B, %Y") %>
+        <%= @post.created_at.to_date.strftime("%d.%m.%Y") %>
         <% if user_signed_in? && current_user.admin? %>
         |
-        <%= link_to 'Ред', edit_admin_post_path(@post) %>
+        <%= link_to 'Ред', edit_admin_post_path(@post), class: "no__link" %>
         |
-        <%= link_to 'Уд', admin_post_path(@post), method: :delete, data: { confirm: 'Вы уверены?' } %>
+        <%= link_to 'Уд', admin_post_path(@post), class: "no__link", method: :delete, data: { confirm: 'Вы уверены?' } %>
         <% end %>
         </time>
     </small>
@@ -41,7 +41,7 @@
                <div class="tablo__zakaza">
                         <h1 class="tablo__zag">Внимание!</h1>
                         <div class="tablo__text">
-                            Для того, чтобы произвети заказ выбранного Вами товара, необходимо обязательно <span class="war">Вызвать замерщика</span> или связаться с нами любим из доступных способов, а именно по электронной почте или моб. телефону, которые указанны в начале стр <span class="war">(если вы сидите через десктопную версию сайта)</span>, либо по нажатию кнопки в правом нижнем углу <span class="war">(если используется моб. версия сайта)</span>.
+                            Для того, чтобы произвеcти заказ выбранного Вами товара, необходимо обязательно <span class="war">Вызвать замерщика</span> или связаться с нами любим из доступных способов, а именно по электронной почте или моб. телефону, которые указанны в начале стр <span class="war">(если Вы используете полную версию сайта)</span>, либо по нажатию кнопки в правом нижнем углу <span class="war">(если используется моб. версия сайта)</span>.
                         </div>
                     </div>
     </div>

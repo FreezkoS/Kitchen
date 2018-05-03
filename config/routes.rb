@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   get 'sends/index'
 
   get 'zams/index'
+  scope '/categories' do
+      get 'zams/index'
+  end
+    scope '/posts' do
+      get 'zams/index'
+  end
 ##поисковик
   get 'results/index'
 ##пароли

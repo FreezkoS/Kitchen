@@ -9,6 +9,13 @@ float:left;
 padding: 10px;
 background: white;
 margin-left: 26px;
+box-shadow:1px 1px 1px #111;
+}
+
+.post:hover{
+-moz-box-shadow:0 0 10px #000;
+-webkit-box-shadow:0 0 10px #000;
+box-shadow:0 0 10px #000;
 }
 
 .editor{

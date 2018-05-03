@@ -1,16 +1,16 @@
 <div class="mid2 margin">
     <% if user_signed_in? && current_user.admin? %>
-<%= link_to 'Новый объект', new_admin_post_path, class: 'btn btn-outline-primary pull-xxs-right mar2' %>   
+<%= link_to 'Новый объект', new_admin_post_path, class: 'btn btn-outline-primary pull-xxs-right' %>   
     <% end %>
 </div>
 <div class="mid clearfix">
-<h1>Вся мебель</h1>
+    <div class="zagolovok"> 
+<h1 class="items__text">Вся мебель</h1>
+    </div>
 <!--Вывод кухон-->
 <%= render @posts %>
 <!--Вывод кухон после пагинации-->
-<!--
 <div class="kit_pag">
-<%= will_paginate @posts, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
+<%= paginate @posts, window: 1 %>
 </div>
--->
 </div>

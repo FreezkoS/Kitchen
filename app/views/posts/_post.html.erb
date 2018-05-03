@@ -1,21 +1,24 @@
- <arctical class="post clearfix">
+<arctical class="post clearfix no__link">
+    <%= link_to(post_path(post), class: "no__link") do %>
     <div class="mid2 cleardix">
     <%= image_tag post.image.url(:thumb), class: 'thumb myimg' if post.image? %>
     <small>
         <% if user_signed_in? && current_user.admin? %>
         <time>
-        <%= post.created_at.to_date.strftime("%d %B, %Y") %>
+        <span class="no__link__2">
+        <%= post.created_at.to_date.strftime("%d.%m.%Y") %>
+        </span>
         |
-        <%= link_to 'Ред', edit_admin_post_path(post) %>
+        <%= link_to 'Ред', edit_admin_post_path(post), class: "no__link" %>
         |
-        <%= link_to 'Уд', admin_post_path(post), method: :delete, data: { confirm: 'Вы уверены?' } %>
+        <%= link_to 'Уд', admin_post_path(post), class: "no__link", method: :delete, data: { confirm: 'Вы уверены?' } %>
         </time>
         <% end %>
     </small>
     <section>  
-    <h2 class="t1"><%= link_to post.title, post_path(post) %></h2>
+    <h2 class="t1"><%= link_to post.title, post_path(post), class: "no__link" %></h2>
     <h2 class="t2"><%= post.summary %></h2>
     </section>
      </div>
+    <% end %>
 </arctical>
-

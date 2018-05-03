@@ -29,9 +29,7 @@
                   <div class="kontacts right">
                       <p class="kontacts__info ">т. 89196174444</p>
                       <p class="kontacts__info ">т. 89871449292</p>
-                      <a href="https://e.mail.ru/messages/inbox/?back=1" class="no__link">
-                          <p class="kontacts__info mail ">egor.uxanov.97@mail.ru</p>
-                      </a>
+                          <p class="kontacts__info mail "> <a href="https://e.mail.ru/messages/inbox/?back=1" class="no__link" target="_blank">egor.uxanov.97@mail.ru </a></p>
                   </div>
               </div>
          </div>
@@ -55,7 +53,7 @@
 -->
     <%= form_tag("/results/index", :method => "get") do %>
                 <div class="search__blog"> 
-    <%= text_field_tag(:v1) %>
+    <%= text_field_tag(:v1, nil, placeholder: "Введите текст...") %>
     <%= submit_tag "Искать", class:'wd btnS right' %>
                 </div>
     <% end %>
@@ -218,13 +216,13 @@
               
       <%= form_tag("zams/index", :method => "get") do %>
             <label class="first">Ваше Имя</label>
-            <%= text_field_tag(:name) %>
+            <%= text_field_tag(:name, nil, placeholder: "Введите имя...") %>
             <label>Ваш город</label>
-            <%= text_field_tag(:city) %>
+            <%= text_field_tag(:city, nil, placeholder: "Введите город...") %>
             <label>Контактный телефон</label>
-            <%= text_field_tag(:phone1) %>
+            <%= text_field_tag(:phone1, nil, placeholder: "Введите телефон...") %>
             <label>Email</label>
-            <%= email_field_tag(:email) %>
+            <%= email_field_tag(:email, nil, placeholder: "Введите почту...") %>
             <%= submit_tag "Отправить", class: 'button' %>
     <% end %>
             

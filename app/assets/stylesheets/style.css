@@ -254,7 +254,7 @@ transition:all 0.5s;
 /*Вызовы*/
 #phone{
 position:fixed;
-bottom:10px; 
+bottom:40px; 
 right:10px;
 cursor:pointer;
 opacity:0.5;
@@ -539,6 +539,11 @@ text-shadow: 0.5px 1px 1px black;
 text-decoration: none;
 }
 
+.no__link__2{
+pointer-events: none;
+color: black;
+}
+
 .kontacts__info:first-child{
 margin-top: 7px;
 }
@@ -767,7 +772,11 @@ transition:0.5s;
 margin:0 auto 20px auto;
 }
 
-.button__open:hover{
+.button__open a{
+color:#0000EE;    
+}
+
+.button__open a:hover, .button__open:hover{
 color:#63B8FF;
 border-color:#63B8FF;
 cursor:pointer;
@@ -874,6 +883,10 @@ color:#111;
 font-size:20px;
 font-weight:300;
 margin:20px 0;
+}
+
+#email, #name, #city, #phone1{
+height: 48px;
 }
 
 .sub__mail, .sub__submit, #email, #name, #city, #phone1{
@@ -1125,14 +1138,11 @@ width: 35%;
 	padding: 20px 10px 0;
 }
 
-.mi-slider ul li:hover {
-	opacity: 0.8;
-} 
 
 .mi-slider ul li div.maxsize:hover, .main__block__content:hover, div.maxsize__2:hover {
-border-color: darkblue;
-box-shadow: 2px 2px 2px darkblue;
-opacity: 0.8;
+-moz-box-shadow:0 0 10px #000;
+-webkit-box-shadow:0 0 10px #000;
+box-shadow:0 0 10px #000;
 } 
 
 .mi-slider nav {
@@ -1574,6 +1584,9 @@ opacity: 0.8;
      width: 50px;
     height: 50px;
     }
+    #toTop{
+    visibility:hidden;
+    }
     .kontacts__info.mail{
     margin-top: 3px;
     }
@@ -1790,4 +1803,9 @@ opacity: 0.8;
 
 .owl-carousel{
 margin-top: -1px;
+}
+
+/*Пагинация*/
+ul.pagination{
+padding-left: 5px;
 }

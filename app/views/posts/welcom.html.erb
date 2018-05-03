@@ -40,47 +40,49 @@
 							<div id="mi-slider" class="mi-slider">
 								<ul>
 									<li>
-                                        <a href="ITEM1.html" class="no__link">
-									
+                                       <%= link_to(post_path(7), class: "no__link") do %>
 									<div class="maxsize wow bounceIn">
 										<div class="img__div">
                                             <%= image_tag('1.jpg', :alt => "img02", :class => 'img__size' ) %>
 										</div>
 										<div class="img__name">
-										Кухня "Ягода"
-										<h1>Стоимость</h1> <h1>90 000р</h1>
+										Кухня "Ягодка"
+										<h1>Стоимость</h1> <h1>от 86 725 р</h1>
 										</div>
 									</div>
 									
-									</a></li>
-									<li><a href="#" class="no__link">
+									<% end %>
+                                    </li>
+									<li> <%= link_to(post_path(8), class: "no__link") do %>
 									
 									<div class="maxsize wow bounceIn">
 										<div class="img__div">
                                             <%= image_tag('2.jpg', :alt => "img02" ) %>
 										</div>
 										<div class="img__name">
-										Кухня "Яблоко"
-										<h1>Стоимость</h1> <h1>120 000р</h1>
+										Кухня "Интериум"
+										<h1>Стоимость</h1> <h1>от 167 965 р</h1>
 										</div>
-									</div>
+                                        </div><% end %>
 									
-									</a href="#" class="no__link"></li>
-									<li><a href="#">
+									<a href="#" class="no__link">
+                                        </li>
+									<li> <%= link_to(post_path(9), class: "no__link") do %>
 									
 									<div class="maxsize wow bounceIn">
 										<div class="img__div">
                       <%= image_tag('3.jpg', :alt => "img02" ) %>
 										</div>
 										<div class="img__name">
-										Кухня "Киви"
-										<h1>Стоимость</h1> <h1>140 000р</h1>
+										Кухня "Базальт"
+										<h1>Стоимость</h1> <h1>от 88 433 р</h1>
 										</div>
 									</div>
 									
-									</a></li>
+									<% end %></li>
 								</ul>
 								
+<!--
 							<ul>
 									<li><a href="#" class="no__link">
 									
@@ -122,7 +124,9 @@
 									
 									</a></li>
 								</ul>
+-->
 								
+<!--
 								<ul>
 									<li><a href="#" class="no__link">
 									
@@ -164,22 +168,23 @@
 									
 									</a></li>
 								</ul>
+-->
 								
 								<ul>
-									<li><a href="#" class="no__link">
+									<li> <%= link_to(post_path(10), class: "no__link") do %>
 									
 									<div class="maxsize wow bounceIn">
 										<div class="img__div">
                                             <%= image_tag('9.jpg', :alt => "img02" ) %>
 										</div>
 										<div class="img__name">
-										Кухня "Ренесанс"
-										<h1>Стоимость</h1> <h1>90 000р</h1>
+										Кухня "Ладья"
+										<h1>Стоимость</h1> <h1>от 90 000 р</h1>
 										</div>
 									</div>
 									
-									</a></li>
-									<li><a href="#" class="no__link">
+									<% end %></li>
+									<li><%= link_to(post_path(36), class: "no__link") do %>
 									
 									<div class="maxsize wow bounceIn">
 										<div class="img__div">
@@ -187,12 +192,12 @@
 										</div>
 										<div class="img__name">
 										Кухня "Италия"
-										<h1>Стоимость</h1> <h1>125 000р</h1>
+										<h1>Стоимость</h1> <h1>от 125 000 р</h1>
 										</div>
 									</div>
 									
-									</a></li>
-									<li><a href="#" class="no__link">
+									<% end %></li>
+									<li><%= link_to(post_path(37), class: "no__link") do %>
 									
 									<div class="maxsize wow bounceIn">
 										<div class="img__div">
@@ -200,22 +205,24 @@
 										</div>
 										<div class="img__name">
 										Кухня "Венге"
-										<h1>Стоимость</h1> <h1>130 000р</h1>
+										<h1>Стоимость</h1> <h1>от 130 000р</h1>
 										</div>
 									</div>
 									
-									</a></li>
+									<% end %></li>
 								</ul>
 								<nav>
 									<a href="#" class="no__link">Фруктовые</a>
-									<a href="#" class="no__link">Модерн</a>
-									<a href="#" class="no__link">Древесные</a>
+<!--									<a href="#" class="no__link">Модерн</a>-->
+<!--									<a href="#" class="no__link">Древесные</a>-->
 									<a href="#" class="no__link">Классика</a>
 								</nav>
 							</div>
+                        <%= link_to(category_path(1), class: "no__link") do %>
 								<div class="button__open">
-								Открыть все
-								</div>
+                                Открыть все
+                                    </div>
+                        <% end %>
 					</section>
 					
 					<section>
@@ -237,7 +244,7 @@
       <div class="sub__form">                                  
     <%= form_tag("sends/index", :method => "get") do %>
             <div class="sub__zag">Оформление рассылки:</div>
-            <%= email_field_tag(:email) %>
+            <%= email_field_tag(:email, nil, class: 'sub_mail', placeholder: 'Введите почту...') %>
             <p class="sub__p">И нажмите на кнопку ниже</p>
             <%= submit_tag "Оформить", class: 'sub__submit' %>
     <% end %>
@@ -256,61 +263,61 @@
 					<div id="a4" class="content__header__2 wow fadeIn">Шкафы</div>
 							<div id="mi-slider2" class="mi-slider">
 								<ul>
-									<li><a href="#" class="no__link">
+									<li><%= link_to(post_path(19), class: "no__link") do %>
 									
 									<div class="maxsize wow bounceIn">
 										<div class="img__div">
                                               <%= image_tag('12.jpg', :alt => "img02" ) %>
 										</div>
 										<div class="img__name">
-										Шкаф "Аватанак"
-										<h1>Стоимость</h1> <h1>60 000р</h1>
+										Шкаф "Rexar"
+										<h1>Стоимость</h1> <h1>от 43 546 р</h1>
 										</div>
 									</div>
 									
-									</a></li>
-									<li><a href="#" class="no__link">
+									<% end %></li>
+									<li><%= link_to(post_path(18), class: "no__link") do %>
 									
 									<div class="maxsize wow bounceIn">
 										<div class="img__div">
                                             <%= image_tag('13.jpg', :alt => "img02" ) %>
 										</div>
 										<div class="img__name">
-										Кухня "Реддич"
-										<h1>Стоимость</h1> <h1>80 000р</h1>
+										Кухня "Refal"
+										<h1>Стоимость</h1> <h1>от 93 950 р</h1>
 										</div>
 									</div>
 									
-									</a></li>
-									<li><a href="#" class="no__link">
+									<% end %></li>
+									<li><%= link_to(post_path(17), class: "no__link") do %>
 									
 									<div class="maxsize wow bounceIn">
 										<div class="img__div">
                                             <%= image_tag('14.jpg', :alt => "img02" ) %>
 										</div>
 										<div class="img__name">
-										Кухня "Лагуна"
-										<h1>Стоимость</h1> <h1>65 000р</h1>
+										Кухня "HirectTo"
+										<h1>Стоимость</h1> <h1>от 45 385 р</h1>
 										</div>
 									</div>
 									
-									</a></li>
+									<% end %></li>
 								</ul>
 								
 							<ul>
-									<li><a href="#" class="no__link">
+									<li><%= link_to(post_path(16), class: "no__link") do %>
 									
 									<div class="maxsize wow bounceIn">
 										<div class="img__div">
                                         <%= image_tag('15.jpg', :alt => "img02" ) %>
 										</div>
 										<div class="img__name">
-										Кухня "Рокшип"
-										<h1>Стоимость</h1> <h1>45 000р</h1>
+										Кухня "Roy13"
+										<h1>Стоимость</h1> <h1>от 32 785 р</h1>
 										</div>
 									</div>
 									
-									</a></li>
+									<% end %></li>
 									<li><a href="#" class="no__link"> 
 									
 									<div class="maxsize wow bounceIn">
@@ -319,7 +326,7 @@
 										</div>
 										<div class="img__name">
 										Кухня "Кракен"
-										<h1>Стоимость</h1> <h1>50 000р</h1>
+										<h1>Стоимость</h1> <h1>от 50 000 р</h1>
 										</div>
 									</div>
 									
@@ -332,7 +339,7 @@
 										</div>
 										<div class="img__name">
 										Кухня "Ноктюрн"
-										<h1>Стоимость</h1> <h1>60 000р</h1>
+										<h1>Стоимость</h1> <h1>от 60 000 р</h1>
 										</div>
 									</div>
 									
@@ -344,9 +351,11 @@
 									<a href="#" class="no__link">Шкафы (Классика)</a>
 								</nav>
 							</div>
+                        <%= link_to(category_path(2), class: "no__link") do %>
 								<div class="button__open">
-								Открыть все
-								</div>
+                                Открыть все
+                                    </div>
+                        <% end %>
 					</section>
                 
                     <section class="crownfon other__info">
@@ -367,7 +376,7 @@
                                     </div>
                                     <div class="right__text__block">
                                         <p>Данная бесседка обладаем особым шармом и красотой отделки</p>
-                                        <p>Стоимость данной бесседки около <br>130 000р</p>
+                                        <p>Стоимость данной бесседки около <br>от 130 000 р</p>
                                     </div>    
                                 </div>
                             </div>
@@ -380,7 +389,7 @@
 										</div>
 										<div class="img__name">
 										Веранда "Сосна"
-										<h1>Стоимость</h1> <h1>80 000р</h1>
+										<h1>Стоимость</h1> <h1>от 80 000 р</h1>
 										</div>
 									</div>
                         
@@ -390,33 +399,42 @@
 										</div>
 										<div class="img__name">
 										Баня "4x7m2"
-										<h1>Стоимость</h1> <h1>180 000р</h1>
+										<h1>Стоимость</h1> <h1>от 180 000 р</h1>
 										</div>
 									</div>
                                    </div>
+                                <% link_to() do %>
                                 <div class="button__open">
 								Открыть все
 								</div>
+                                <% end %>
                     </div>
 					       </section>
                 
                 <section class="crownfon">
                        <div id="a4" class="content__header__2 wow fadeIn">мы вконтакте!</div>
-                <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
+                <script type="text/javascript" src="//vk.com/js/api/openapi.js?154"></script>
                 <div class="mid">
 <div class="pusto wow fadeIn left">
                         <p>
-                        Наша группа Вконтакте увеличивается с каждым днем. Если ты хочешь всегда быть в курсе всех событий, то необходимо подписаться на нас. В разделе "Обсуждения" всегда можно задать интересующие Вас вопросы.
+                        Наша группа Вконтакте увеличивается с каждым днем. Если ты хочешь всегда быть в курсе всех событий, то необходимо подписаться на нас.
+                        </p>
+                        <p>
+                        В разделе "Обсуждения" всегда можно задать интересующие Вас вопросы.
                         </p>
                         <p>
                         Каждый день появляется новая мебель, поэтому не забывайте заходить в группу, чтобы выбрать для себя что нибудь новенькое.
                         </p>
+                        <p>
+                        Желаем приятных покупок.
+                        </p>
                     </div>
         <div class="main__block__vk right">
   <div class="block__vk">                  
+            <!-- VK Widget -->
 <div id="vk_groups"></div>
 <script type="text/javascript">
-VK.Widgets.Group("vk_groups", {mode: 3, width: "320px", height: "300"}, 85912875);
+VK.Widgets.Group("vk_groups", {mode: 3, width: "320px", height: "300"}, 94768358);
 </script>
 </div>
                     </div>
