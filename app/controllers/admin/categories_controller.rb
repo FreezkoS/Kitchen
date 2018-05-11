@@ -37,7 +37,7 @@ class Admin::CategoriesController < Admin::AdminController
     
     def destroy
         @category.destroy
-        redirect_to categories_path, success: 'Категория успешно удалена'
+        redirect_to admin_categories_path, success: 'Категория успешно удалена'
     end
     
     private
