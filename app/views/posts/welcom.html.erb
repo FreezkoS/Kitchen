@@ -361,6 +361,7 @@
                     <section class="crownfon other__info">
                         <div id="a4" class="content__header__2 wow fadeIn">Особенные работы</div>
                             <div class="mid2">
+                                <%= link_to(post_path(29), class: "no__link") do %>
                             <div class="main__block__content clearfix wow bounceInUp">
                                 <div class="info__block__content left">
                                     <div class="img__block__content ">
@@ -380,9 +381,10 @@
                                     </div>    
                                 </div>
                             </div>
-                         
+                         <% end %>
                 
                     <div class="block__other clearfix">
+                                         <%= link_to(post_path(30), class: "no__link") do %>
                         	<div class="maxsize__2 wow bounceInUp">
 										<div class="img__div">
                                  <%= image_tag('18.jpg', :alt => "img02", :class => 'img__div__size' ) %>
@@ -392,8 +394,11 @@
 										<h1>Стоимость</h1> <h1>от 80 000 р</h1>
 										</div>
 									</div>
+                            <% end %>
                         
                             	<div class="maxsize__2 wow bounceInUp">
+                                    <%= link_to(post_path(31), class: "no__link") do %>
+                                    <div>
 										<div class="img__div">
                         <%= image_tag('19.jpg', :alt => "img02", :class => 'img__div__size' ) %>
 										</div>
@@ -401,13 +406,11 @@
 										Баня "4x7m2"
 										<h1>Стоимость</h1> <h1>от 180 000 р</h1>
 										</div>
+                                    </div>
+                                         <% end %>
 									</div>
                                    </div>
-                                <% link_to() do %>
-                                <div class="button__open">
-								Открыть все
-								</div>
-                                <% end %>
+                                
                     </div>
 					       </section>
                 
