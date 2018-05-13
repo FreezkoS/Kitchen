@@ -23,6 +23,9 @@ resources :categories, only: [:show]
     resources :categories, except: [:show]   
  end
 
+#теги
+resources :tags, only: [:show]   
+
 ##вызов замерщика
 
     

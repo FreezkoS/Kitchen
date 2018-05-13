@@ -34,6 +34,7 @@ en:
         title: 'Название'
         summary: 'Стоимость'
         body: 'Описание'
+        all_tags: 'Теги'
       category:
         name: 'Название'
         parent_id: 'Родитель'

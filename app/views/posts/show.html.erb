@@ -1,8 +1,16 @@
 <arctical class="post2 clearfix">
     <div class="mid2 clearfix">
+        
+        <div class="tag__style">
+        <% tag_cloud(Tag.counts, %w{tag1, tag2, tag3, tag4}) do |tag, css_class| %>
+        <%= link_to tag.name, tag_path(tag.name), class: 'css_class no__link tag__a' %>
+        <% end %>   
+    </div>
+        
     <div class="zagolovok">  
     <h1 class="items__text"><%= @post.title %></h1>
     </div>
+         
     <small>
         <time>
         <% if @post.category.present? %>
