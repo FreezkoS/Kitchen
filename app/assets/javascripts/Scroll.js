@@ -53,6 +53,7 @@ $('.number__block').hide('slide',{direction: 'right'}, 1000);
 });
 });
 
+
 //Закрытие alert
 $(document).ready(function(){
 $('.close').click(function(){ 
