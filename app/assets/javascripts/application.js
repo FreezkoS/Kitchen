@@ -16,4 +16,4 @@
 //= require_tree .
 //= require bootstrap-sprockets
 //= require jquery-ui
-//= require jquery-ui/effect.all
+//= require jquery-ui/effect-slide
