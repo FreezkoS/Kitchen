@@ -244,7 +244,7 @@
       <div class="sub__form">                                  
     <%= form_tag("sends/index", :method => "get") do %>
             <div class="sub__zag">Оформление рассылки:</div>
-            <%= email_field_tag(:email, nil, class: 'sub_mail', placeholder: 'Введите почту...') %>
+            <%= email_field_tag(:email, nil, class: 'sub_mail', required: true, placeholder: 'Введите почту...') %>
             <p class="sub__p">И нажмите на кнопку ниже</p>
             <%= submit_tag "Оформить", class: 'sub__submit' %>
     <% end %>

@@ -217,13 +217,13 @@
               
       <%= form_tag("zams/index", :method => "get") do %>
             <label class="first">Ваше Имя</label>
-            <%= text_field_tag(:name, nil, placeholder: "Введите имя...") %>
+            <%= text_field_tag(:name, nil, required: true, placeholder: "Введите имя...") %>
             <label>Ваш город</label>
-            <%= text_field_tag(:city, nil, placeholder: "Введите город...") %>
+            <%= text_field_tag(:city, nil, required: true, placeholder: "Введите город...") %>
             <label>Контактный телефон</label>
-            <%= text_field_tag(:phone1, nil, placeholder: "Введите телефон...") %>
+            <%= text_field_tag(:phone1, nil, required: true, placeholder: "Введите телефон...") %>
             <label>Email</label>
-            <%= email_field_tag(:email, nil, placeholder: "Введите почту...") %>
+            <%= email_field_tag(:email, nil, required: true, placeholder: "Введите почту...") %>
             <%= submit_tag "Отправить", class: 'button' %>
     <% end %>
             
