@@ -41,17 +41,17 @@ $(function(){
 
 
 //Открытие вызовов
-$(document).ready(function(){
-$('.number__block').hide();
-$('#phone').click(function(){
-if ($('.number__block').is(':hidden')){
-$('.number__block').show('slide',{direction: 'right'}, 1000);
-}
-else {
-$('.number__block').hide('slide',{direction: 'right'}, 1000);
-}
-});
-});
+//$(document).ready(function(){
+//$('.number__block').hide();
+//$('#phone').click(function(){
+//if ($('.number__block').is(':hidden')){
+//$('.number__block').show('slide',{direction: 'right'}, 1000);
+//}
+//else {
+//$('.number__block').hide('slide',{direction: 'right'}, 1000);
+//}
+//});
+//});
 
 //$(document).ready(function(){
 //    $('#phone').on('click',function(){
@@ -63,6 +63,13 @@ $('.number__block').hide('slide',{direction: 'right'}, 1000);
 //      );
 //    });
 //  });
+$(document).ready(function(){
+    $('#phone').on('click',function(){
+      console.log("click")
+      $('.number__block').toggle();
+    });
+  });
+
 
 //Закрытие alert
 $(document).ready(function(){
